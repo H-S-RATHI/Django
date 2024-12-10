@@ -6,6 +6,12 @@ import os
 import logging
 import traceback
 
+from django.http import JsonResponse
+
+def zyb_tracker_statistics_action(request):
+    # Log the incoming request for analysis
+    logging.debug(f"Received request at /hybridaction/zybTrackerStatisticsAction: {request.GET}")
+    return JsonResponse({"message": "Endpoint is not implemented"}, status=404)
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
 
